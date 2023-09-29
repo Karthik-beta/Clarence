@@ -1,0 +1,95 @@
+.dash-card {
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 0.5em;
+}
+
+.dash-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  align-items: center;
+}
+
+td, th {
+  border: 1px solid #000;
+}
+
+thead th {
+  border-top: none;
+  font-size: small;
+}
+
+tbody td:first-child {
+  border-left: none;
+  border-bottom-left-radius: 5px;
+}
+
+tbody td:last-child {
+  border-right: none;
+  border-bottom-right-radius: 5px;
+}
+
+thead th:first-child {
+  border-left: none;
+  border-top-left-radius: 5px;
+}
+
+thead th:last-child {
+  border-right: none;
+  border-top-right-radius: 5px;
+}
+
+td[rowspan] {
+  vertical-align: middle;
+}
+
+/* .table th {
+  white-space: nowrap;
+} */
+
+.table td {
+  white-space: nowrap;
+}
+
+.yellow {
+  background-color: #B0744A;
+}
+
+.blue {
+  background-color: #5bc0de;
+}
+
+.green {
+  background-color: #5cb85c;
+}
+
+.orange {
+  background-color: #f0ad4e;
+}
+
+.custom-select-sm {
+  height: 2rem;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.right-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Optional: Add some margin for spacing */
+.right-end .btn {
+  margin: 10px;
+}
+

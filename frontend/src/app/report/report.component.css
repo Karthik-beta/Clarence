@@ -1,0 +1,24 @@
+td, th {
+  white-space: nowrap;
+}
+
+/* Make the PrimeNG DataTable header cells sticky */
+.p-datatable-sm.p-datatable-gridlines thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa; /* Add your desired background color */
+  z-index: 1; /* Ensure the header is above other elements */
+}
+
+.label {
+  padding-bottom: 5px;
+}
+
+
+.small-calendar .p-calendar {
+  transform: scale(0.8);
+}
+
+.text-size {
+  font-size: small;
+}

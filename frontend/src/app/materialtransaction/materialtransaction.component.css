@@ -1,0 +1,35 @@
+html, body {
+  background-color: yellow;
+}
+
+.card-body-main {
+  padding: 10px;
+  background-color: skyblue;
+}
+
+.card-body {
+  font-size: x-small;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-sm {
+  padding: -5px;
+  margin: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  font-size: x-small;
+}
+
+.orange {
+  background-color: orange;
+  color: white
+}
+
+.green {
+  background-color: green;
+  color: white
+}

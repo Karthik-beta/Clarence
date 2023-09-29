@@ -1,0 +1,79 @@
+.table.custom-table th,
+.table.custom-table td {
+  font-size: small; /* Set the desired font size for the cells */
+}
+
+.table.custom-table select {
+  width: 100%; /* Set the width of the select dropdown to fill the cell */
+  font-size: 12px; /* Set the desired font size for the select dropdown */
+  padding: 4px; /* Adjust the padding to reduce the size of the dropdown */
+}
+
+.table td {
+  white-space: nowrap;
+}
+
+.table th {
+  white-space: nowrap;
+}
+
+.custom-card {
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card-title {
+  padding-bottom: 10px;
+}
+
+.card-inside {
+  padding-top: 5px;
+}
+
+.box {
+  /* border: 1px solid black; */
+  height: 70px;
+  margin: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.yellow-round {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin: 0 5px; /* Adjust the margin as needed */
+  vertical-align: middle;
+}
+
+.red-round {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 0 5px; /* Adjust the margin as needed */
+  vertical-align: middle;
+}
+
+.green-round {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+  margin: 0 5px; /* Adjust the margin as needed */
+  vertical-align: middle;
+}
+
+.right-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Optional: Add some margin for spacing */
+.right-end .btn {
+  margin: 10px;
+}

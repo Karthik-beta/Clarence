@@ -1,0 +1,24 @@
+td, th {
+  white-space: nowrap;
+}
+
+.mainCard {
+  background-color: #ffffff;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  /* margin: 5px; */
+  margin-top: 5px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+  border: none !important;
+}
+
+#chart {
+  max-width: 650px;
+  max-height: 200px;
+  margin: 35px auto;
+}
+
+.chart-container {
+  max-height: 400px; /* Adjust the maximum height as needed */
+}

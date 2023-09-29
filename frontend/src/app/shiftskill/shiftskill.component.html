@@ -1,0 +1,371 @@
+<!-- Display the current shift and its corresponding time -->
+<!-- <div class="scale text-center" style="font-size: large; font-weight: bolder;">
+  <p class="mt-2">SHIFT {{ currentShift }} - {{ currentTime | date:'shortTime' }}</p>
+</div> -->
+
+<div class="scale text-center" style="font-size: large; font-weight: bolder;">
+  <p class="mt-2">Wipro GE Healthcare Limited</p>
+  <p>SVCT LINE - SHIFT A (06 TO 14)</p>
+</div>
+
+<!-- Display the real-time clock -->
+<!-- <div class="clock">
+  {{ currentTime | date:'mediumTime' }}
+</div> -->
+
+
+
+<div class="container-fluid mt-1">
+  <div class="row d-flex">
+    <div class="col">
+      <div class="card custom-card shadow">
+        <div class="card-body">
+          <div class="container justify-content-center text-center">
+            <h5 class="card-title" style="text-align: center; font-weight: bolder; font-stretch: expanded; font-size:medium ; color: darkmagenta;">SUB-ASSEMBLY LINE</h5>
+            </div>
+            <div class="container shadow custom-card">
+            <div class="row justify-content-center card-inside">
+              <div class="col box">
+                <p>14</p>
+                <p style="color: blue;">Planned</p>
+              </div>
+              <div class="col box">
+                <p>12</p>
+                <p style="color: blue;">Check In</p>
+              </div>
+              <div class="col box">
+                <p><span class="red-round"></span></p>
+                <p style="color: blue;">Status</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card shadow">
+        <div class="card-body">
+          <div class="container justify-content-center text-center mb-2">
+          <h5 class="card-title" style="text-align: center; font-weight: bolder; font-stretch: expanded; font-size:medium ; color: rgb(146, 61, 29);">ASSEMBLY LINE </h5>
+          </div>
+          <div class="container shadow custom-card">
+          <div class="row justify-content-center card-inside">
+            <div class="col box">
+              <p>04</p>
+              <p style="color: blue;">Planned</p>
+            </div>
+            <div class="col box">
+              <p>03</p>
+              <p style="color: blue;">Check In</p>
+            </div>
+            <div class="col box">
+              <p><span class="yellow-round"></span></p>
+              <p style="color: blue;">Status</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card custom-card shadow">
+        <div class="card-body">
+          <div class="container justify-content-center text-center">
+            <h5 class="card-title" style="text-align: center; font-weight: bolder; font-stretch: expanded; font-size:medium ; color: darkblue;">INSTALLATION & TESTING LINE </h5>
+            </div>
+            <div class="container shadow custom-card">
+            <div class="row justify-content-center card-inside">
+              <div class="col box">
+                <p>09</p>
+                <p style="color: blue;">Planned</p>
+              </div>
+              <div class="col box">
+                <p>09</p>
+                <p style="color: blue;">Check In</p>
+              </div>
+              <div class="col box">
+                <p><span class="green-round"></span></p>
+                <p style="color: blue;">Status</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div style="display: flex; justify-content: center;">
+<table class="table table-sm custom-table table-bordered table-responsive mt-2 justify-content-center shadow">
+  <thead>
+    <tr>
+      <th colspan="15" style="text-align: center; font-weight: bolder; font-size: medium ;background-color:cyan">Sub-Assembly Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #F0C08A;">
+      <th>OPERATION</th>
+      <td>PL-01, Creating a DHR</td>
+<td>PL-02, Cable Tie base Assembly</td>
+<td>PL-03, Bearing Grease nipple assembly on bearing</td>
+<td>PL-04, Bearing assembly</td>
+<td>PL-05, Drive Pulley Assembly</td>
+<td>PL-06, Axial Drive Assembly</td>
+<td>PL-07, Axial Drive cable routing</td>
+<td>PL-08, Axial drive Motor Assembly</td>
+<td>PL-09, Bearing Noise Test</td>
+<td>PL-10, Slip Ring Bracket Assembly and runout setting</td>
+<td>PL-11, Home sensor and bracket Assembly</td>
+<td>PL-12, Bearing Dowel pin insertion</td>
+<td>PL-13, Slip Ring Brush bracket Assembly</td>
+<td>PL-14, Cover bracket assembly</td>
+
+
+    </tr>
+    <tr>
+      <th>SKILL MATRIX</th>
+      <td>AXIAL DRIVE ASSEMBLY</td>
+<td>AXIAL DRIVE Testing</td>
+<td>ORP Sub-Assembly</td>
+<td>Console Assembly</td>
+<td>Console Testing</td>
+<td>Covers Sub-Assembly</td>
+<td>SR sub-Assembly</td>
+<td>TGP Sub-Assembly</td>
+<td>DAS Sub-Assembly</td>
+<td>Table Main Build</td>
+<td>Table Testing</td>
+<td>Table Labeling</td>
+<td>Table PDI</td>
+<td>Table Sub-assembly 1</td>
+    </tr>
+    <tr style="background-color: rgb(195, 227, 247);">
+      <th>SSO ID & NAME</th>
+      <td>Krishna , 223044348</td>
+<td>Suma HC, 212437037</td>
+<td>Geetha BP, 305008438</td>
+<td>Nagendra Swamy C G, 305021393 <span style="font-weight: bold; color: red;">(AB)</span></td>
+<td>Nagendra Swamy C G, 305021393 <span style="font-weight: bold; color: red;">(AB)</span></td>
+<td>Rajashekhar Arjunagi, 212764709</td>
+<td>Suma HC, 212437037</td>
+<td>Suma HC, 212437037</td>
+<td>Meshak ., 223044347</td>
+<td>Ramachandra G, 305020222</td>
+<td>Raja Shankara G, 305022167</td>
+<td>Raja Shankara G, 305022167</td>
+<td>Ramachandra G, 305020222</td>
+<td>Ramachandra G, 305020222</td>
+
+    </tr>
+    <tr style="font-weight: bold;">
+      <th>STATUS</th>
+      <td>P - 06:34:00</td>
+      <td>P - 06:35:34</td>
+      <td>P - 06:34:00</td>
+      <td *ngIf="selectedEmployeeSubAssembly; else defaultStatusCell" style="background-color:darkturquoise">
+        {{ selectedEmployeeSubAssembly }} (S)
+      </td>
+      <td *ngIf="selectedEmployeeSubAssembly2; else defaultStatusCell" style="background-color:darkturquoise">
+        {{ selectedEmployeeSubAssembly2 }} (S)
+      </td>
+      <td>P - 06:42:00</td>
+      <td>P - 06:31:00</td>
+      <td>P - 06:42:42</td>
+      <td>P - 06:41:30</td>
+      <td>P - 06:35:34</td>
+      <td>P - 06:24:00</td>
+      <td>P - 06:21:00</td>
+      <td>P - 06:32:42</td>
+      <td>P - 06:41:30</td>
+    </tr>
+    <ng-template #defaultStatusCell>
+      <td style="background-color: #ed2939;">AB</td>
+    </ng-template>
+    <tr style="font-weight: bold;">
+      <th>SUBSTITUTE EMPLOYEE</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="width:7%; ">
+        <select class="form-control" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployeeSubAssembly">
+          <option value="" disabled selected>Select</option>
+          <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+        </select>
+      </td>
+      <td style="width:7%; ">
+        <select class="form-control" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployeeSubAssembly2">
+          <option value="" disabled selected>Select</option>
+          <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+        </select>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container col-md-12 mt-2 rounded "> -->
+  <table class="table table-sm custom-table table-striped table-bordered table-responsive mt-2  justify-content-center shadow">
+    <thead>
+      <tr>
+        <th colspan="11" style="text-align: center; font-weight: bolder; font-size:medium ;background-color: coral;">Main Assembly Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #F0C08A;">
+        <th>OPERATION</th>
+        <td>PL-15, SVCT M1</td>
+        <td>PL-16, SVCT M2</td>
+        <td>PL-17, SVCT M3</td>
+        <td>PL-18, SVCT M4</td>
+      </tr>
+      <tr>
+        <th>SKILL MATRIX</th>
+        <td>SVCT M1</td>
+        <td>SVCT M2</td>
+        <td>SVCT M3</td>
+        <td>SVCT M4</td>
+      </tr>
+      <tr style="background-color: rgb(195, 227, 247);">
+        <th>SSO ID & NAME</th>
+        <td>Sharath SB, 223098308</td>
+<td>Nischal M G, 223039084</td>
+<td>Sudhakar T, 212588539</td>
+<td>Arockiaswamy I, 305008680 <span style="font-weight: bold; color: red;">(AB)</span></td>
+      </tr>
+      <tr style="font-weight: bold;">
+        <th>STATUS</th>
+        <td>P - 06:32:11</td>
+        <td>P - 06:31:00</td>
+        <td>P - 06:32:42</td>
+        <td *ngIf="selectedEmployeeMainAssembly; else defaultStatusCell" style="background-color:darkturquoise">
+          {{ selectedEmployeeMainAssembly }} (S)
+        </td>
+      </tr>
+      <tr>
+        <th>SUBSTITUTE EMPLOYEE</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="width:7%; ">
+          <select class="form-control" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployeeMainAssembly">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+<table class="table table-sm custom-table table-bordered table-responsive mt-2 justify-content-center shadow">
+  <thead>
+    <tr>
+      <th colspan="11" style="text-align: center; font-weight: bolder; font-size: medium ;background-color: turquoise">Installation & Testing Line</th>
+    </tr>
+  </thead>
+  <tbody style="font-size: small;">
+    <tr style="background-color: #F0C08A;">
+      <th>OPERATION</th>
+      <td>SVCT Installation</td>
+<td>SVCT Initial Testing</td>
+<td>SVCT Alignment</td>
+<td>SVCT Covers Assembly</td>
+<td>SVCT Calibration</td>
+<td>SVCT CIE</td>
+<td>SVCT POST CIE</td>
+<td>SVCT Disassembly & Labeling</td>
+<td>SVCT PDI</td>
+    </tr>
+    <tr>
+      <th>SKILL MATRIX</th>
+      <td>PL-19, SVCT Installation</td>
+<td>PL-20, SVCT Initial Testing</td>
+<td>PL-21, SVCT Alignment</td>
+<td>PL-22, SVCT Covers Assembly</td>
+<td>PL-23, SVCT Calibration</td>
+<td>PL-24, SVCT CIE</td>
+<td>PL-25, SVCT POST CIE</td>
+<td>PL-26, SVCT Disassembly & Labeling</td>
+<td>PL-27, SVCT PDI</td>
+    </tr>
+    <tr style="background-color: rgb(195, 227, 247);">
+      <th>SSO ID & NAME</th>
+      <td>Ravindra S, 305018960</td>
+<td>MANU R, 212763613</td>
+<td>Sudhakar T, 212588539</td>
+<td>Arockiaswamy I, 305008680</td>
+<td>Nagabhushana M T, 212777416</td>
+<td>Nasir Hussain, 305015266</td>
+<td>Nasir Hussain, 305015266</td>
+<td>Sanjay K, 223053737</td>
+<td>Sanjay K, 223053737</td>
+
+    </tr>
+    <tr style="font-weight: bold;">
+      <th>STATUS</th>
+      <td>P - 06:32:00</td>
+        <td>P - 06:31:00</td>
+        <td>P - 06:32:42</td>
+        <td>P - 06:21:30</td>
+        <td>P - 06:42:23</td>
+        <td>P - 06:44:00</td>
+        <td>P - 06:35:34</td>
+        <td>P - 06:34:00</td>
+        <td>P - 06:32:43</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <th>SUBSTITUTE EMPLOYEE</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+<div class="right-end">
+  <button type="button" class="btn btn-lg btn-success">
+    <i class="fas fa-save mr-1"></i>  Save
+  </button>
+</div>

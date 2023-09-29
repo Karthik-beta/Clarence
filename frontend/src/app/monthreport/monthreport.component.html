@@ -1,0 +1,99 @@
+<div class="col-md-12 d-flex justify-content-center">
+  <div class="card mainCard container-fluid col-12 d-flex justify-content-center">
+    <apx-chart [series]="chartBarSeries" [chart]="chartBarOptions" [labels]="chartBarLabels" [title]="chartBarTitle" [dataLabels]="chartDataLabels"></apx-chart>
+  </div>
+</div>
+<div class="container-fluid col-md-12 mt-2 mb-2 small-calendar">
+  <div class="row">
+    <div class="col-md-2 text-left">
+      <span class="p-float-label">
+        <p-autoComplete pInputText class="shadow"></p-autoComplete>
+        <label for="inputtext-left">Search</label>
+      </span>
+    </div>
+    <div class="col-md-2 flex justify-content-left" style="margin-left: 1rem;">
+      <span class="p-float-label">
+        <p-calendar [(ngModel)]="date" view="month" dateFormat="mm/yy" [touchUI]="true" [showIcon]="true" [readonlyInput]="true" class="shadow"></p-calendar>
+        <label for="inputtext-left">Select Month</label>
+      </span>
+    </div>
+    <div class="col-md-2 justify-content-center">
+      <p-dropdown optionLabel="name" placeholder="Select Company" class="shadow"></p-dropdown>
+    </div>
+    <!-- <div class="col-md-2">
+      <p-dropdown optionLabel="name" placeholder="Select Search Criteria" class="text-sm small-calendar shadow"></p-dropdown>
+    </div> -->
+    <div class="col-auto">
+      <button pButton type="button" (click)="downloadAttendanceData()"  class="p-button-raised shadow"><i class="pi pi-download" style="margin-right: 0.3rem;"></i> Export CSV</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="card shadow mt-2" style="border: none !important;">
+  <p-table [value]="combinedLogs" class="p-datatable-sm" styleClass="p-datatable-sm p-datatable-gridlines" [tableStyle]="{ 'min-width': '20rem' }" [lazy]="true" [loading]="loading" (onLazyLoad)="loadLogs($event)" [paginator]="true" [rows]="rows" [totalRecords]="totalRecords" [rowsPerPageOptions]="rowsPerPageOptions" [showCurrentPageReport]="true" currentPageReportTemplate="{first} - {last} of {totalRecords}">
+    <!-- Rest of the PrimeNG DataTable code here -->
+    <ng-template pTemplate="header">
+      <tr class="text-size">
+        <th>#</th>
+        <th>EMPLOYEE ID</th>
+        <th>DEVICE ENROLL ID</th>
+        <th>EMPLOYEE NAME</th>
+        <th>COMPANY</th>
+        <th>LOCATION</th>
+        <th>JOB TYPE</th>
+        <th>DEPARTMENT</th>
+        <th>EMPLOYEE TYPE</th>
+        <th>DESIGNATION</th>
+        <th>LOG DATE</th>
+        <th>SHIFT STATUS</th>
+        <th>IN TIME</th>
+        <th>OUT TIME</th>
+        <th>TOTAL HOURS</th>
+        <th>LATE ENTRY</th>
+        <th>EARLY EXIT</th>
+        <th>OT HOURS</th>
+        <!-- <th>TOTAL LUNCH HOURS</th> -->
+        <th>STATUS</th>
+        <!-- Add other headers for the remaining fields -->
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-log let-i="rowIndex">
+      <tr class="text-size">
+        <td>{{ i + 1 }}</td>
+        <td>{{ log.employeeid }}</td>
+        <td>{{ log.device_enroll_id }}</td>
+        <td>{{ log.employee_name }}</td>
+        <td>{{ log.shortname }}</td>
+        <td>{{ log.location }}</td>
+        <td>{{ log.category }}</td>
+        <td>{{ log.department }}</td>
+        <td>{{ log.job_type }}</td>
+        <td>{{ log.designation }}</td>
+        <td>{{ log.logdate }}</td>
+        <td [style.background-color]="getShiftStatusColor(log.shift_status)" style="text-align: center; font-weight: bold; color:black">{{ log.shift_status }}</td>
+        <td>{{ log.first_logtime }}</td>
+        <td>{{ log.last_logtime }}</td>
+        <td>{{ log.total_time }}</td>
+        <td>{{ log.late_entry }}</td>
+        <td>{{ log.early_exit }}</td>
+        <td>{{ log.overtime }}</td>
+        <!-- <td>00:00</td> -->
+        <td>{{ log.status }}</td>
+        <!-- Add other body rows for the remaining fields -->
+      </tr>
+    </ng-template>
+  </p-table>
+  <!-- Add the p-paginator component below the table -->
+  <!-- <p-paginator
+     [rows]="rows"
+     [totalRecords]="totalRecords"
+     [rowsPerPageOptions]="rowsPerPageOptions"
+     (onPageChange)="onPageChange($event)"
+     ></p-paginator> -->
+</div>

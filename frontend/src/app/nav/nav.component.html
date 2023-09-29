@@ -1,0 +1,83 @@
+<div class="container-fluid shadow">
+  <header class="d-flex flex-wrap justify-content-center py-2 mb-2 border-bottom ">
+    <a href="/dashboard" class="d-flex align-items-center mb-4 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="assets/images/Digital-i.png" alt="" width="150" height="40">
+      <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-4">MAGNUM</span> -->
+    </a>
+
+    <ul class="nav nav-pills" style="margin-right: 0.7em;">
+      <!-- <li class="nav-item"><a routerLink="/dashboard" class="nav-link active" aria-current="page"><i class="pi pi-plus"></i> Dashboard</a></li> -->
+      <!-- Shift Strength V/S Skill Matrix, Evacuation  -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <i class="pi pi-home"></i> Dashboard
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/Shift_Skill"><i class="pi pi-shield"></i> Shift Strength V/S Skill Matrix</a>
+            <a class="dropdown-item" routerLink="/Shift_Strength"><i class="pi pi-shield"></i> Shift Strength</a>
+            <a class="dropdown-item"><i class="pi pi-sign-out"></i> Evacuation</a>
+          </div>
+        </li>
+      <li class="nav-item"><a routerLink="/employee" class="nav-link link-body-emphasis" aria-current="page"><i class="bi bi-person-fill-add"></i>  Onboarding</a></li>
+      <!-- <li class="nav-item"><a routerLink="/employee" class="nav-link link-body-emphasis mr-1" aria-current="page"><i class="bi bi-person-fill-add"></i> Resource Allocation</a></li> -->
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <i class="fa-solid fa-scale-balanced"></i> Resource Allocation
+      </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/Shift_Management"><i class="pi pi-clock"></i> Shift management</a>
+          <a class="dropdown-item" routerLink="/Shift_Strength"><i class="pi pi-calendar"></i> Reserve Skill Matrix Employee</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <i class="fa-solid fa-people-roof"></i> Attendance Regularization
+      </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/dashboard"><i class="fa-regular fa-calendar-days"></i> Manual Attendance Management</a>
+          <!-- <a class="dropdown-item"><i class="fa-solid fa-fingerprint"></i> Manual Punch Management</a> -->
+          <a class="dropdown-item"><i class="pi pi-calendar"></i> Leave Management</a>
+          <a class="dropdown-item"><i class="pi pi-calendar-plus"></i> Compensatory Off Management</a>
+          <a class="dropdown-item"><i class="pi pi-calendar-minus"></i> On Duty Management</a>
+          <a class="dropdown-item"><i class="pi pi-id-card"></i> Gate Pass Management</a>
+          <a class="dropdown-item"><i class="pi pi-calendar-times"></i> Holiday Management</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link link-body-emphasis"><i class="fa-regular fa-calendar-days"></i> Daily Info</a></li>
+      <!-- <li class="nav-item"><a routerLink="/monthly" class="nav-link active mr-3 ml-2"> <i class="pi pi-calendar"></i> Monthly Info</a></li> -->
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <i class="fa-regular fa-calendar"></i> Monthly Info
+      </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/monthly"><i class="pi pi-clock"></i> Monthly In - Out</a>
+          <a class="dropdown-item"><i class="pi pi-calendar"></i> Monthly In – Out Register</a>
+          <a class="dropdown-item"><i class="pi pi-calendar-plus"></i> Monthly Muster Roll Register</a>
+          <a class="dropdown-item"><i class="pi pi-calendar-plus"></i> Payroll Output Register</a>
+        </div>
+      </li>
+      <!-- <li class="nav-item"><a routerLink="/report" class="nav-link link-body-emphasis"><i class="bi bi-file-earmark-excel"></i> History</a></li> -->
+      <div (click)="profileMenu.toggle($event)">
+      <li class="nav-item" style="font-size: 1.7rem; margin-right: 0.8rem; cursor: pointer;"><i class="bi bi-person-circle" ></i><i class="pi pi-chevron-down" style="margin-left: 0.5rem;"></i></li>
+      <p-menu #profileMenu [model]="profile_items" [popup]="true"></p-menu>
+      </div>
+      <div (click)="settingsMenu.toggle($event)">
+      <li class="nav-item" style="font-size: 1.7rem; cursor: pointer;"><i class="bi bi-gear"></i><i class="pi pi-chevron-down" style="margin-left: 0.5rem;"></i> </li>
+      <p-menu #settingsMenu [model]="settings_items" [popup]="true"></p-menu>
+      </div>
+    </ul>
+  </header>
+</div>
+
+
+
+
+
+  <p-toast></p-toast>
+  <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+
+
+
+
+

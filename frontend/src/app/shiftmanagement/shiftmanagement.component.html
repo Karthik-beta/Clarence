@@ -1,0 +1,497 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-md-auto">
+          <div class="dash-card shadow " style="background-color: teal;">
+              <div class="card-body">
+                <p style="font-weight: bolder;">Production Planned</p>
+                <div><h3>01</h3></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-auto">
+          <div class="dash-card shadow " style="background-color: rebeccapurple;">
+              <div class="card-body">
+                <p style="font-weight: bolder;">Order in Process</p>
+                <div><h3>0</h3></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="dash-card shadow " style="background-color: rgb(128, 187, 39);">
+            <div class="card-body">
+              <p style="font-weight: bolder;">Order Completed</p>
+              <div><h3>0</h3></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="dash-card shadow " style="background-color: rgb(133, 72, 133);">
+          <div class="card-body">
+            <p style="font-weight: bolder;">All</p>
+            <div><h3>0</h3></div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="dash-card shadow " style="background-color: rgb(133, 125, 125);">
+          <div class="card-body">
+            <p style="font-weight: bolder;">Transactions Today</p>
+            <div><h3>0</h3></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="search-bar d-flex mt-2">
+  <button type="button" routerLink="/admin" class="btn btn-secondary ml-1 d-flex align-items-center" >
+    <i class="pi pi-chevron-left"></i> Back
+  </button>
+    <input class="form-control ml-1" placeholder="Search">
+    <button type="button" class="btn btn-outline-primary ml-2 d-flex align-items-center" data-toggle="modal" data-target="#importModalCenter">
+      <i class="pi pi-file-import mr-2"></i> Import
+    </button>
+    <button type="button" class="btn btn-outline-primary ml-2 d-flex align-items-center" data-toggle="modal" data-target="#exportModalCenter">
+      <i class="pi pi-download mr-2"></i> Export
+    </button>
+    <button type="button" routerLink="/Shift_Management/Add_Edit" class="btn btn-primary ml-2 mr-1 d-flex align-items-center" data-toggle="modal" data-target="#exampleModalCenter"><i class="pi pi-plus mr-2"></i>Add</button>
+  </div>
+
+<!-- <div class="container-fluid mt-2">
+  <table class="table table-striped table-sm" style="font-size: small;">
+    <thead class="thead" style="color: white; background-color: #2b6099;">
+      <tr>
+        <th>JOB WORK</th>
+        <th>COMPANY</th>
+        <th>PLANT</th>
+        <th>SHOPFLOOR</th>
+        <th>PRODUCT ID</th>
+        <th>STAGE</th>
+        <th>OPERATION STAGES</th>
+        <th>PRODUCT TARGET</th>
+        <th>SKILL MATRIX</th>
+        <th>ASSEMBLY LINE</th>
+        <th>MACHINE ID</th>
+        <th>DATE</th>
+        <th class="blue">SHIFT A</th>
+        <th class="yellow">SHIFT B</th>
+        <th class="green">SHIFT C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5">JW001</td>
+        <td rowspan="5">TVS</td>
+        <td rowspan="5">HOSUR</td>
+        <td rowspan="5">SGB</td>
+        <td rowspan="5">BREAK SHOE</td>
+        <td>1</td>
+        <td>SOLDERING</td>
+        <td>1.5</td>
+        <td>ABC</td>
+        <td rowspan="5">TSE</td>
+        <td rowspan="5">SP001</td>
+        <td rowspan="5">01-06-2023</td>
+        <td class="blue">MAHESH, 001</td>
+        <td class="yellow">RAKESH, 003</td>
+        <td class="green">CHANDRU, 006</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>FEEDING</td>
+        <td>1.8</td>
+        <td>XYZ</td>
+        <td class="blue">BABU, 002</td>
+        <td class="yellow">AKASH, 004</td>
+        <td class="green">ANIL, 003</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>SOLDERING</td>
+        <td>1.5</td>
+        <td>ABC</td>
+        <td class="blue">MAHESH, 001</td>
+        <td class="yellow">RAKESH, 003</td>
+        <td class="green">CHANDRU, 006</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>FEEDING</td>
+        <td>1.8</td>
+        <td>XYZ</td>
+        <td class="blue">BABU, 002</td>
+        <td class="yellow">AKASH, 004</td>
+        <td class="green">ANIL, 003</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>FEEDING</td>
+        <td>1.8</td>
+        <td>ABC</td>
+        <td class="blue">BABU, 002</td>
+        <td class="yellow">AKASH, 004</td>
+        <td class="green">ANIL, 003</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid mt-2"> -->
+  <table class="table table-responsive table-striped table-sm mt-2" style="font-size: smaller; width: 100%; table-layout: auto;">
+    <thead class="thead" style="color: white; background-color: #2b6099;">
+      <tr>
+        <th>JOB WORK</th>
+        <th>COMPANY</th>
+        <th>PLANT</th>
+        <th>SHOPFLOOR</th>
+        <th>PRODUCT ID</th>
+        <th>STAGES</th>
+        <th>LINE OPERATION STAGES</th>
+        <th>TARGET/UNIT</th>
+        <th>SKILL MATRIX</th>
+        <!-- <th>ASSEMBLY LINE</th> -->
+        <th>MACHINE ID</th>
+        <th>TOTAL ORDER</th>
+        <th>HOURS REQUIRED/TOTAL ORDER</th>
+        <th>ASSIGN DATE</th>
+        <!-- <th class="blue">SHIFT A</th> -->
+        <th>SHIFT A</th>
+        <th>SHIFT B</th>
+        <th>SHIFT C</th>
+        <th>TOTAL HOURS</th>
+        <th>TOTAL PRODUCTION</th>
+        <th>PRODUCTION MANAGER</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="30">JW001</td>
+        <td rowspan="30">WIPRO</td>
+        <td rowspan="30">ITPL</td>
+        <td rowspan="30">SVCT</td>
+        <td rowspan="30">168888</td>
+        <th style="color: white; background-color: #2b6099;">STAGES</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <th style="color: white; background-color: #2b6099;">TARGET/UNIT</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <td rowspan="30">SVCT</td>
+        <td rowspan="30">1</td>
+        <th>TARGET/UNIT(MINUTES)</th>
+        <td rowspan="30">07/15/2023</td>
+        <!-- <td rowspan="30" class="blue">06 - 14</td> -->
+        <th style="color: white; background-color: #2b6099; white-space: nowrap;">SUB-ASSEMBLY LINE</th>
+        <td rowspan="30">Nil</td>
+        <td rowspan="30">Nil</td>
+        <th>TARGET/UNIT</th>
+        <th>TARGET/UNIT</th>
+        <td rowspan="30">MAHESH, 12345678</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>AXIAL DRIVE ASSEMBLY</td>
+        <td>140</td>
+        <td>AXIAL DRIVE ASSEMBLY</td>
+        <td>140</td>
+        <td>Geetha BP</td>
+        <td>140</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>AXIAL DRIVE Testing</td>
+        <td>100</td>
+        <td>AXIAL DRIVE Testing</td>
+        <td>100</td>
+        <td>Sridhar</td>
+        <td>100</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>ORP Sub-Assembly</td>
+        <td>288</td>
+        <td>ORP Sub-Assembly</td>
+        <td>288</td>
+        <td>Sudhakar</td>
+        <td>288</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Console Assembly</td>
+        <td>188</td>
+        <td>Console Assembly</td>
+        <td>188</td>
+        <td>Chanappa</td>
+        <td>188</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Console Testing</td>
+        <td>100</td>
+        <td>Console Testing</td>
+        <td>100</td>
+        <td>Venkatesh KB</td>
+        <td>100</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Covers Sub-Assembly</td>
+        <td>200</td>
+        <td>Covers Sub-Assembly</td>
+        <td>200</td>
+        <td>Rajsekhar</td>
+        <td>200</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>SR sub-Assembly</td>
+        <td>144</td>
+        <td>SR sub-Assembly</td>
+        <td>144</td>
+        <td>Yuvarajan</td>
+        <td>144</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>TGP Sub-Assembly</td>
+        <td>240</td>
+        <td>TGP Sub-Assembly</td>
+        <td>240</td>
+        <td>Ramachandra</td>
+        <td>240</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>DAS Sub-Assembly</td>
+        <td>288</td>
+        <td>DAS Sub-Assembly</td>
+        <td>288</td>
+        <td>Nasir</td>
+        <td>288</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Table Main Build</td>
+        <td>60</td>
+        <td>Table Main Build</td>
+        <td>60</td>
+        <td>Nagbushan</td>
+        <td>60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Table Testing</td>
+        <td>60</td>
+        <td>Table Testing</td>
+        <td>60</td>
+        <td>Mubarak</td>
+        <td>60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Table Labeling</td>
+        <td>60</td>
+        <td>Table Labeling</td>
+        <td>60</td>
+        <td>Raja W</td>
+        <td>60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Table PDI</td>
+        <td>60</td>
+        <td>Table PDI</td>
+        <td>60</td>
+        <td>Yuvarajan</td>
+        <td>60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Table Sub-assembly 1</td>
+        <td>60</td>
+        <td>Table Sub-assembly 1</td>
+        <td>60</td>
+        <td>Ramachandra</td>
+        <td>60</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>STAGES</th>
+        <th>MAINASSEMBLY LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>MAIN ASSEMBLY LINE</th>
+        <th>TARGET/UNIT</th>
+        <th style="white-space: nowrap;">MAIN ASSEMBLY LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>TARGET/UNIT</th>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>SVCT M1</td>
+        <td>480</td>
+        <td>SVCT M1</td>
+        <td>480</td>
+        <td>Venkatesh</td>
+        <td>480</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>SVCT M2</td>
+        <td>480</td>
+        <td>SVCT M2</td>
+        <td>480</td>
+        <td>Yuvarajan</td>
+        <td>480</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>SVCT M3</td>
+        <td>624</td>
+        <td>SVCT M3</td>
+        <td>624</td>
+        <td>Nasir</td>
+        <td>624</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>SVCT M4</td>
+        <td>288</td>
+        <td>SVCT M4</td>
+        <td>288</td>
+        <td>Ramachandra</td>
+        <td>288</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>STAGES</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>TARGET/UNIT</th>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>SVCT Installation</td>
+        <td>1140</td>
+        <td>SVCT Installation</td>
+        <td>1140</td>
+        <td>Yuvarajan</td>
+        <td>1140</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>SVCT Initial Testing</td>
+        <td>960</td>
+        <td>SVCT Initial Testing</td>
+        <td>960</td>
+        <td>Geetha</td>
+        <td>960</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>SVCT Alignment</td>
+        <td>720</td>
+        <td>SVCT Alignment</td>
+        <td>720</td>
+        <td>Yuvarajan</td>
+        <td>720</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>SVCT Covers Assembly</td>
+        <td>360</td>
+        <td>SVCT Covers Assembly</td>
+        <td>360</td>
+        <td>Geetha</td>
+        <td>360</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>SVCT Calibration</td>
+        <td>900</td>
+        <td>SVCT Calibration</td>
+        <td>900</td>
+        <td>Chanappa</td>
+        <td>900</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>SVCT CIE</td>
+        <td>300</td>
+        <td>SVCT CIE</td>
+        <td>300</td>
+        <td>SVCT CIE</td>
+        <td>300</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>SVCT POST CIE</td>
+        <td>180</td>
+        <td>SVCT POST CIE</td>
+        <td>180</td>
+        <td>Chanappa</td>
+        <td>180</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>SVCT Dissassembly & Labeling</td>
+        <td>540</td>
+        <td>SVCT Dissassembly & Labeling</td>
+        <td>540</td>
+        <td>Chanappa</td>
+        <td>540</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>SVCT PDI</td>
+        <td>840</td>
+        <td>SVCT PDI</td>
+        <td>840</td>
+        <td>Chanappa</td>
+        <td>840</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+<!-- </div> -->

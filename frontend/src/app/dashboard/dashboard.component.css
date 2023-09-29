@@ -1,0 +1,119 @@
+.mainCard {
+  background-color: #ffffff;
+  /* border-radius: 8px; */
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+  /* padding: 15px; */
+  /* margin-top: 10em; */
+  margin-bottom: 5px;
+  transition: transform 0.2s ease-in-out;
+  border: none !important;
+  border-bottom-right-radius: 0px;
+}
+
+.smallCardsContainer {
+  background-color: #ffffff;
+  /* border-radius: 8px; */
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* margin-top: 10em; */
+  margin-bottom: 5px;
+  transition: transform 0.2s ease-in-out;
+  /* align-items: center; */
+  justify-content: center;
+  border: none !important;
+  border-bottom-left-radius: 0px;
+}
+
+.smallCard {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+  /* background-color: rgb(106, 133, 160); */
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+  /* font-size: larger; */
+  color: white;
+  border: none !important;
+}
+
+.smallCard-daily {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+  /* background-color: rgb(106, 133, 160); */
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+  /* font-size: larger; */
+  color: white;
+  border: none !important;
+}
+
+.smallCard h3 {
+  font-weight: bolder;
+  color: white;
+  margin-top: 10px;
+  font-stretch: ultra-expanded;
+}
+
+.card-title {
+  padding-top: 5px;
+}
+
+/* Optional: Add hover effect */
+.smallCard:hover {
+  transform: translateY(-12px);
+  transform: scale(1.1);
+}
+
+.smallCard-daily:hover {
+  transform: translateY(-12px);
+  transform: scale(0.9);
+}
+
+.card-icon.card-icon-large {
+  position: relative;
+  z-index: 1;
+}
+
+.card .card-statistic-3 .card-icon {
+  text-align: center;
+  line-height: 50px;
+  margin-left: 15px;
+  color: #000;
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  opacity: 0.1;
+}
+
+.card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+  font-size: 110px;
+}
+
+/* .chartContainer {
+  width: 100%;
+  height: 500px;
+} */
+
+.mainCard2 {
+  background-color: #ffffff;
+  /* border-radius: 8px; */
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  /* padding-bottom: 20px;
+  /* padding: 15px; */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+td, th {
+  white-space: nowrap;
+}

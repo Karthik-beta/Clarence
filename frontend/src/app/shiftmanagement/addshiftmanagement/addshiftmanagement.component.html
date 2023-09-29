@@ -1,0 +1,1064 @@
+
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-md-auto">
+          <div class="dash-card shadow " style="background-color: teal;">
+              <div class="card-body">
+                <p style="font-weight: bolder;">Production Planned</p>
+                <div><h3>01</h3></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-auto">
+          <div class="dash-card shadow " style="background-color: rebeccapurple;">
+              <div class="card-body">
+                <p style="font-weight: bolder;">Order in Process</p>
+                <div><h3>0</h3></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="dash-card shadow " style="background-color: rgb(128, 187, 39);">
+            <div class="card-body">
+              <p style="font-weight: bolder;">Order Completed</p>
+              <div><h3>0</h3></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="dash-card shadow " style="background-color: rgb(133, 72, 133);">
+          <div class="card-body">
+            <p style="font-weight: bolder;">All</p>
+            <div><h3>0</h3></div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="dash-card shadow " style="background-color: rgb(133, 125, 125);">
+          <div class="card-body">
+            <p style="font-weight: bolder;">Transactions Today</p>
+            <div><h3>0</h3></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--
+<div class="container col-md-12 mt-1">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped table-sm " style="font-size: small; text-align: center;">
+        <thead style="background-color: #2b6099; color: white; font-size: small; font-weight: lighter;">
+          <tr>
+            <th>JOB ID</th>
+            <th>EMPLOYEE ID</th>
+            <th>PRODUCT ID</th>
+            <th>PRODUCT TARGET</th>
+            <th>DRAWING NO</th>
+            <th>CUSTOMER</th>
+            <th>PO NO & DATE</th>
+            <th>ORDER QUANTITY</th>
+            <th>REQUIRED HOURS</th>
+            <th>PLANNED ASSIGNED DATE</th>
+            <th>PRODUCTION EXPECTED DATE</th>
+            <th style="background-color: teal;">PLANNED</th>
+            <th style="background-color: rebeccapurple;">PROCESSING</th>
+            <th style="background-color: rgb(128, 187, 39);">COMPLETED</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>EMP001</td>
+            <td>FLAME SPREADER</td>
+            <td>17.2 S </td>
+            <td>DRAW001</td>
+            <td>CUSTOMER A</td>
+            <td>TEST</td>
+            <td>15400</td>
+            <td>74:00:00</td>
+            <td>01-07-2023</td>
+            <td>10-07-2023</td>
+            <td style="background-color: teal; width:7%">21-07-2023</td>
+            <td style="background-color: rebeccapurple; width:7%"></td>
+            <td style="background-color: rgb(128, 187, 39); width:7%">25-07-2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<div class="search-bar d-flex">
+  <button type="button" routerLink="/Shift_Management" class="btn btn-secondary ml-1 d-flex align-items-center" >
+    <i class="pi pi-chevron-left mr-1"></i> Back
+  </button>
+  <input class="form-control ml-1" placeholder="Search">
+  <button type="button" class="btn btn-outline-primary ml-2 d-flex align-items-center" data-toggle="modal" data-target="#importModalCenter">
+    <i class="pi pi-file-import mr-2"></i> Import
+  </button>
+  <button type="button" class="btn btn-outline-primary ml-2 mr-1 d-flex align-items-center" data-toggle="modal" data-target="#exportModalCenter">
+    <i class="pi pi-download mr-2"></i> Export
+  </button>
+  <!-- <button type="button" routerLink="/ra" class="btn btn-primary ml-2 mr-1 d-flex align-items-center" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-plus mr-2"></i>Add</button> -->
+</div>
+
+
+  <!-- <div class="container-fluid mt-2">
+    <table class="table table-striped table-sm">
+      <thead class="thead" style="color: white; background-color: #2b6099;">
+        <tr>
+          <th>JOB WORK</th>
+          <th>COMPANY</th>
+          <th>PLANT</th>
+          <th>SHOPFLOOR</th>
+          <th>PRODUCT ID</th>
+          <th>STAGE</th>
+          <th>OPERATION STAGES</th>
+          <th>PRODUCT TARGET</th>
+          <th>SKILL MATRIX</th>
+          <th>ASSEMBLY LINE</th>
+          <th>MACHINE ID</th>
+          <th>DATE</th>
+          <th>SHIFT A</th>
+          <th>SHIFT B</th>
+          <th>SHIFT C</th>
+        </tr>
+      </thead>
+      <tbody style="font-size: small; height: 8px;">
+        <tr>
+          <td rowspan="5">JW001</td>
+          <td rowspan="5">TVS</td>
+          <td rowspan="5">HOSUR</td>
+          <td rowspan="5">SGB</td>
+          <td rowspan="5">BREAK SHOE</td>
+          <td>1</td>
+          <td class="orange">SOLDERING</td>
+          <td>1.5</td>
+          <td>A</td>
+          <td rowspan="5">TSE</td>
+          <td rowspan="5">SP001</td>
+          <td rowspan="5">01-06-2023</td>
+          <td class="blue">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+          <td class="yellow">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+          <td class="green">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="orange">FEEDING</td>
+          <td>1.8</td>
+          <td>B</td>
+          <td class="blue">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="yellow">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="green">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="orange">SOLDERING</td>
+          <td>1.5</td>
+          <td>C</td>
+          <td class="blue">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+          <td class="yellow">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+          <td class="green">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">MAHESH, 001</option>
+              <option value="pdf">RAKESH, 003</option>
+              <option value="xlsx">CHANDRU, 006</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="orange">FEEDING</td>
+          <td>1.8</td>
+          <td>D</td>
+          <td class="blue">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="yellow">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="green">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="orange">FEEDING</td>
+          <td>1.8</td>
+          <td>E</td>
+          <td class="blue">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="yellow">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+          <td class="green">
+            <select class="form-control form-control-sm custom-select custom-select-sm" id="exportType" name="exportType">
+              <option disabled selected value="">- select -</option>
+              <option value="csv">BABU, 002</option>
+              <option value="pdf">AKASH, 004</option>
+              <option value="xlsx">ANIL, 003</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+
+
+
+
+
+
+  <table class="table table-responsive table-striped table-sm mt-2" style="font-size: smaller; width: 100%; table-layout: auto;  white-space: nowrap;">
+    <thead class="thead" style="color: white; background-color: #2b6099;">
+      <tr>
+        <th>JOB WORK</th>
+        <th>COMPANY</th>
+        <th>PLANT</th>
+        <th>SHOPFLOOR</th>
+        <th>PRODUCT ID</th>
+        <th>STAGES</th>
+        <th>LINE OPERATION STAGES</th>
+        <th>TARGET/UNIT</th>
+        <th>SKILL MATRIX</th>
+        <th>MACHINE ID</th>
+        <th>TOTAL ORDER</th>
+        <th>HOURS REQUIRED/TOTAL ORDER</th>
+        <th>ASSIGN DATE</th>
+        <th>SHIFT A</th>
+        <th>SHIFT B</th>
+        <th>SHIFT C</th>
+        <th>TOTAL HOURS</th>
+        <th>TOTAL PRODUCTION</th>
+        <th>PRODUCTION MANAGER</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="30">JW001</td>
+        <td rowspan="30">WIPRO</td>
+        <td rowspan="30">ITPL</td>
+        <td rowspan="30">SVCT</td>
+        <td rowspan="30">168888</td>
+        <th style="color: white; background-color: #2b6099;">STAGES</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <th style="color: white; background-color: #2b6099;">TARGET/UNIT</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <td rowspan="30">NIL</td>
+        <td rowspan="30">NIL</td>
+        <td rowspan="30">NIL</td>
+        <td rowspan="30">07/15/2023</td>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <th style="color: white; background-color: #2b6099;">SUB-ASSEMBLY LINE</th>
+        <td rowspan="30">NIL</td>
+        <td rowspan="30">NIL</td>
+        <td rowspan="30">MAHESH, 12345678</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>creating a DHR</td>
+        <td>NIL</td>
+        <td>AXIAL DRIVE ASSEMBLY</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Cable Tie base Assembly</td>
+        <td>NIL</td>
+        <td>AXIAL DRIVE Testing</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Bearing Grease nipple assembly on bearing</td>
+        <td>NIL</td>
+        <td>ORP Sub-Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Bearing assembly</td>
+        <td>NIL</td>
+        <td>Console Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Drive Pulley Assembly</td>
+        <td>NIL</td>
+        <td>Console Testing</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Axial Drive Assembly</td>
+        <td>NIL</td>
+        <td>Covers Sub-Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Axial Drive cable routing</td>
+        <td>NIL</td>
+        <td>SR sub-Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Axial drive Motor Assembly</td>
+        <td>NIL</td>
+        <td>TGP Sub-Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Bearing Noise Test:</td>
+        <td>NIL</td>
+        <td>DAS Sub-Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Slip Ring Bracket Assembly and runout setting</td>
+        <td>NIL</td>
+        <td>Table Main Build</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Home sensor and bracket Assembly</td>
+        <td>NIL</td>
+        <td>Table Testing</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Bearing Dowel pin insertion</td>
+        <td>NIL</td>
+        <td>Table Labeling</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Slip Ring Brush bracket Assembly</td>
+        <td>NIL</td>
+        <td>Table PDI</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Cover bracket assembly</td>
+        <td>NIL</td>
+        <td>Table Sub-assembly 1</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr style="color: white; background-color: #2b6099;">
+        <th>STAGES</th>
+        <th>MAIN ASSEMBLY LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>MAIN ASSEMBLY LINE</th>
+        <th>ASSEMBLY LINE</th>
+        <th>ASSEMBLY LINE</th>
+        <th>ASSEMBLY LINE</th>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>SVCT M1</td>
+        <td>NIL</td>
+        <td>SVCT M1</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>SVCT M2</td>
+        <td>NIL</td>
+        <td>SVCT M2</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>SVCT M3</td>
+        <td>NIL</td>
+        <td>SVCT M3</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>SVCT M4</td>
+        <td>NIL</td>
+        <td>SVCT M4</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr style="color: white; background-color: #2b6099;">
+        <th>STAGES</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TARGET/UNIT</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <th>TESTING & INSTALLATION LINE</th>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>SVCT Installation</td>
+        <td>NIL</td>
+        <td>SVCT Installation</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>SVCT Initial Testing</td>
+        <td>NIL</td>
+        <td>SVCT Initial Testing</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>SVCT Alignment</td>
+        <td>NIL</td>
+        <td>SVCT Alignment</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>SVCT Covers Assembly</td>
+        <td>NIL</td>
+        <td>SVCT Covers Assembly</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>SVCT Calibration</td>
+        <td>NIL</td>
+        <td>SVCT Calibration</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>SVCT CIE</td>
+        <td>NIL</td>
+        <td>SVCT CIE</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>SVCT POST CIE</td>
+        <td>NIL</td>
+        <td>SVCT POST CIE</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>SVCT Dissassembly & Labeling</td>
+        <td>NIL</td>
+        <td>SVCT Dissassembly & Labeling</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>SVCT PDI</td>
+        <td>NIL</td>
+        <td>SVCT PDI</td>
+        <td class="blue">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="yellow">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <td class="green">
+          <select class="form-control custom-select-sm" style="height: 28px;" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor="let employee of employeeOptions">{{ employee }}</option>
+          </select>
+        </td>
+        <!-- Add more cells here if needed -->
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="right-end">
+    <button type="button" class="btn btn-lg btn-success">
+      <i class="fas fa-save mr-1"></i>  Save
+    </button>
+  </div>

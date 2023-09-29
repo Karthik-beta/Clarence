@@ -1,0 +1,250 @@
+<div class="container-fluid col-md-12 mt-2" style="display: flex; justify-content: center; align-items: center;">
+  <div class="row col-md-12 justify-content-center ">
+    <div class="card mainCard col-md-4">
+      <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels"></apx-chart>
+    </div>
+    <div class="card smallCardsContainer col-md-8 mx-auto">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Small Card 1 content -->
+          <div class="card smallCard shadow" style="background-color: #463D8A;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">LIVE HEADCOUNT</p>
+              <h4 class="card-title text-bold">{{ getLiveHeadcount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 2 content -->
+          <div class="card smallCard shadow" style="background-color: #8B178B;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">TOTAL CHECK IN</p>
+              <h4 class="card-title text-bold">{{ getPresentCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 3 content -->
+          <div class="card smallCard shadow" style="background-color: #DAA420;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">TOTAL CHECK OUT</p>
+              <h4 class="card-title text-bold">{{ getEarlyExitCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Small Card 4 content -->
+          <div class="card smallCard-daily shadow" style="background-color: #E966B2;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <h4 class="card-title text-bold">DAILY<br> INFORMATION</h4>
+              <!-- <p class="card-subtitle">CLICK TO VIEW</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 5 content -->
+          <div class="card smallCard shadow" style="background-color: #62CD37;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">TOTAL PRESENT</p>
+              <h4 class="card-title text-bold">{{ getPresentCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 6 content -->
+          <div class="card smallCard shadow" style="background-color: #CD5C5D;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">TOTAL ABSENT</p>
+              <h4 class="card-title text-bold">{{ getAbsentCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Small Card 7 content -->
+          <div class="card smallCard shadow" style="background-color: #A7B289;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">LATE ENTRY</p>
+              <h4 class="card-title text-bold">{{ getLateEntryCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 8 content -->
+          <div class="card smallCard shadow" style="background-color: #7F8000;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">EARLY EXIT</p>
+              <h4 class="card-title text-bold">{{ getEarlyExitCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!-- Small Card 9 content -->
+          <div class="card smallCard shadow" style="background-color: #31692C;">
+            <!-- ... Small Card content ... -->
+            <div class="text-center">
+              <p class="card-subtitle">OVERTIME</p>
+              <h4 class="card-title text-bold">{{ getOvertimeCount() }}</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="col-md-12 d-flex justify-content-center">
+  <div class="card mainCard2 col-md-6">
+    <apx-chart [series]="chartBarSeries" [chart]="chartBarOptions" [labels]="chartBarLabels" [title]="chartBarTitle" [dataLabels]="chartDataLabels"></apx-chart>
+  </div>
+</div> -->
+
+
+<div class="container-fluid col-md-12 mt-2 mb-2 small-calendar">
+  <div class="row">
+    <div class="col-auto text-left">
+      <span class="p-float-label">
+      <p-autoComplete
+      [suggestions]="autocompleteSuggestions"
+      (completeMethod)="search($event)"
+      field="autocomplete_label"
+      [(ngModel)]="text"
+      id="inputtext-left"
+      class="text-sm small-calendar shadow"
+      pInputText
+      ></p-autoComplete>
+      <label for="inputtext-left">Search</label>
+      </span>
+    </div>
+    <div class="col-md-2">
+      <span class="p-float-label">
+        <p-calendar [(ngModel)]="date" [showIcon]="true" dateFormat="yy-mm-dd" (onSelect)="onDateSelected()" class="small-calendar shadow"></p-calendar>
+      <label for="inputtext-left">Select Date </label>
+      </span>
+  </div>
+  <div class="col-auto justify-content-center">
+    <p-dropdown [options]="locations" [(ngModel)]="selectedLocation" optionLabel="name" placeholder="Select Company" class="text-sm small-calendar shadow"></p-dropdown>
+  </div>
+  <!-- <div class="col-md-2">
+    <p-dropdown [options]="criterias" [(ngModel)]="selectedCriteria" optionLabel="name" placeholder="Select Search Criteria" class="text-sm small-calendar shadow"></p-dropdown>
+  </div> -->
+  <div class="col-auto">
+    <button pButton type="button" (click)="downloadAttendanceData()"  class="p-button-raised shadow"><i class="pi pi-download" style="margin-right: 0.3rem;"></i> Export CSV</button>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card shadow" style="border: none !important;">
+  <p-table
+  [value]="combinedLogs"
+  class="p-datatable-sm"
+  styleClass="p-datatable-sm p-datatable-gridlines"
+  [tableStyle]="{ 'min-width': '20rem' }"
+  [lazy]="true"
+  [loading]="loading"
+  (onLazyLoad)="loadLogs($event)"
+  [paginator]="true"
+  [rows]="rows"
+  [totalRecords]="totalRecords"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  [scrollable]="true"
+  [showCurrentPageReport]="true"
+    currentPageReportTemplate="{first} - {last} of {totalRecords}"
+>
+    <!-- Rest of the PrimeNG DataTable code here -->
+    <ng-template pTemplate="header">
+      <tr class="text-size">
+        <th>#</th>
+        <th>EMPLOYEE ID</th>
+        <th>DEVICE ENROLL ID</th>
+        <th>EMPLOYEE NAME</th>
+        <th>COMPANY</th>
+        <th>LOCATION</th>
+        <th>JOB TYPE</th>
+        <th>DEPARTMENT</th>
+        <th>EMPLOYEE TYPE</th>
+        <th>DESIGNATION</th>
+        <th>LOG DATE</th>
+        <th>SHIFT</th>
+        <th>SHIFT STATUS</th>
+        <th>IN TIME</th>
+        <th>OUT TIME</th>
+        <th>TOTAL HOURS</th>
+        <th>LATE ENTRY</th>
+        <th>EARLY EXIT</th>
+        <th>OT HOURS</th>
+        <!-- <th>TOTAL LUNCH HOURS</th> -->
+        <th>STATUS</th>
+        <!-- Add other headers for the remaining fields -->
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-log let-i="rowIndex">
+      <tr class="text-size">
+        <td>{{ i + 1 }}</td>
+        <td>{{ log.employeeid }}</td>
+        <td>{{ log.device_enroll_id }}</td>
+        <td>{{ log.employee_name }}</td>
+        <td>{{ log.shortname }}</td>
+        <td>{{ log.location }}</td>
+        <td>{{ log.category }}</td>
+        <td>{{ log.department }}</td>
+        <td>{{ log.job_type }}</td>
+        <td>{{ log.designation }}</td>
+        <td>{{ log.logdate }}</td>
+        <td>{{ log.shift }}</td>
+        <td [style.background-color]="getShiftStatusColor(log.shift_status)" style="text-align: center; font-weight: bold; color:black">{{ log.shift_status }}</td>
+        <td>{{ log.first_logtime }}</td>
+        <td>{{ log.last_logtime }}</td>
+        <td>{{ log.total_time }}</td>
+        <td>{{ log.late_entry }}</td>
+        <td>{{ log.early_exit }}</td>
+        <td>{{ log.overtime }}</td>
+        <!-- <td>00:00</td> -->
+        <td>{{ log.status }}</td>
+        <!-- Add other body rows for the remaining fields -->
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Add the p-paginator component below the table -->
+  <!-- <p-paginator
+    [rows]="rows"
+    [totalRecords]="totalRecords"
+    [rowsPerPageOptions]="rowsPerPageOptions"
+    (onPageChange)="onPageChange($event)"
+  ></p-paginator> -->
+</div>

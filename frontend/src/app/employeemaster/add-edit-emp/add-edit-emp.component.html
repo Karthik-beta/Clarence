@@ -1,0 +1,340 @@
+<div class="container-fluid mb-6 col-md-12" style="width:100%; background-color: aliceblue;">
+  <div class="form-container row">
+    <!-- Employee Information Form -->
+    <div class="container-fluid mt-2">
+      <div class="row ">
+        <div class="container-fluid col-md-8">
+          <div class="row justify-content-left">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="employee_id">Employee ID</label>
+                <input type="text" placeholder="Enter Employee ID" class="form-control" id="employee_id" [(ngModel)]="employee_id">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="device_enroll_id">Device Enroll ID</label>
+                <input type="text" class="form-control" id="device_enroll_id" placeholder="Enter Device Enroll ID" [(ngModel)]="device_enroll_id">
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-6 justify-content-left">
+              <div class="form-group">
+                <label for="employee_name">Employee Name</label>
+                <input type="text" class="form-control" id="employee_name" placeholder="Enter Employee Name" [(ngModel)]="employee_name">
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-left">
+              <div class="form-group">
+                <label for="email_id">E-Mail ID</label>
+                <input type="text" class="form-control" id="employee_name" placeholder="Enter Employee Name" [(ngModel)]="employee_name">
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-left">
+              <div class="form-group">
+                <label for="contact_details">Contact Details</label>
+                <input type="text" class="form-control" id="employee_name" placeholder="Enter Employee Name" [(ngModel)]="employee_name">
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-left">
+              <div class="form-group">
+                <label for="reporting_manager">Reporting Manager</label>
+                <input type="text" class="form-control" id="reporting_manager" placeholder="Enter Employee Name" [(ngModel)]="employee_name">
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-left">
+              <div class="form-group">
+                <label for="reporting_manager_email">Reporting Manager E-Mail ID</label>
+                <input type="email" class="form-control" id="reporting_manager_email" placeholder="Enter Employee Name" [(ngModel)]="employee_name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="company">Company</label>
+                <select class="form-control custom-select" id="dropdown4" [(ngModel)]="company">
+                  <option disabled selected value="">--Select--</option>
+                  <option>CHS</option>
+                  <option>CKT</option>
+                  <option>CET</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container col-md-3 justify-content-center align-items-center">
+          <!-- Profile Picture Upload Section -->
+          <div class="profile-picture">
+            <img src="assets/images/depositphoto.jpg" alt="" width="150" height="150">
+            <!-- Display uploaded/captured profile picture here -->
+          </div>
+          <div class="buttons">
+            <!-- <button type="button" class="btn btn-info">Capture</button> -->
+            <button type="button" class="btn btn-sm btn-outline-info upload-button">Upload</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid col-md-12">
+        <div class="row justify-content-between">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <select class="form-control custom-select" id="dropdown4" [(ngModel)]="location">
+                <option disabled selected value="">--Select--</option>
+                <option>BENGALURU</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>MALE</option>
+                <option>FEMALE</option>
+                <option>OTHERS</option>
+              </select>
+            </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="job_type">Job Type</label>
+                <select class="form-control custom-select" id="dropdown4">
+                  <option disabled selected value="">--Select--</option>
+                  <option>TRAINING</option>
+                  <option>CONFIRMED</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid col-md-12">
+          <div class="row justify-content-between">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="status">Job Status</label>
+                <select class="form-control custom-select" id="dropdown4">
+                  <option disabled selected value="">--Select--</option>
+                  <option>ACTIVE</option>
+                  <option>RESIGNED</option>
+                  <option>ABSCONDED</option>
+                </select>
+              </div>
+            </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>TEACHING STAFF</option>
+                <option>MONTESSORI</option>
+                <option>KINDERGARTEN</option>
+                <option>OFFICE STAFF</option>
+                <option>SECURITY</option>
+                <option>HOUSEKEEPING STAFF</option>
+                <option>FIELD STAFF</option>
+                <option>EXECUTIVE</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="designation">Designation</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Option 1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid col-md-12">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="employee_type">Employee Type</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>PARMANENT EMPLOYEE</option>
+                <option>CONTRACTOR EMPLOYEE</option>
+                <option>TEMPORARY EMPLOYEE</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="contractor_agency">Contractor Agency</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="divison">Division</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="shopfloor">Shopfloor</label>
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="date_of_joining">Date of Joining</label>
+              <!-- <label for="inputtext-left">Select Date </label> -->
+              <!-- <p-calendar [showIcon]="true" dateFormat="yy-mm-dd"  class="text-sm small-calendr shadow"></p-calendar> -->
+              <input type="date" class="form-control" id="date_of_joining" placeholder="Enter Date of Joining">
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="date_of_leaving">Date of Leaving</label>
+              <!-- <label for="inputtext-left">Select Date </label> -->
+              <!-- <p-calendar [showIcon]="true" dateFormat="yy-mm-dd"  class="text-sm small-calendr shadow"></p-calendar> -->
+              <input type="date" class="form-control" id="date_of_leaving" placeholder="Enter Date of Leaving">
+            </div>
+          </div>
+          </div>
+          <div class="rounded bg-secondary text-white p-1 col-1" style="text-align: center;"> Shift </div>
+        <div class="row" style="background-color: aliceblue;">
+
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="fixed_shift_status">Fixed/Auto Shift</label>
+              <!-- <label for="inputtext-left">Select Date </label> -->
+              <!-- <p-calendar [showIcon]="true" dateFormat="yy-mm-dd"  class="text-sm small-calendr shadow"></p-calendar> -->
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Fixed Shift</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 justify-content-end align-items-center">
+            <div class="form-group">
+              <label for="auto_shift_status">Auto Shift</label>
+              <!-- <label for="inputtext-left">Select Date </label> -->
+              <!-- <p-calendar [showIcon]="true" dateFormat="yy-mm-dd"  class="text-sm small-calendr shadow"></p-calendar> -->
+              <select class="form-control custom-select" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option>Auto Shift</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="rounded bg-secondary text-white p-1 col-1" style="text-align: center;"> Skill Matrix </div>
+        <div class="row" style="background-color: aliceblue;">
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown1">Skill Matrix 1</label>
+              <select class="form-control custom-select" id="dropdown1">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown2">Skill Matrix 2</label>
+              <select class="form-control" id="dropdown2">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown3">Skill Matrix 3</label>
+              <select class="form-control" id="dropdown3">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown4">Skill Matrix 4</label>
+              <select class="form-control" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row" style="background-color: aliceblue;">
+          <div class="col mb-2">
+            <div class="form-group">
+              <label for="dropdown1">Skill Matrix 5</label>
+              <select class="form-control custom-select" id="dropdown1">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown2">Skill Matrix 6</label>
+              <select class="form-control" id="dropdown2">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown3">Skill Matrix 7</label>
+              <select class="form-control" id="dropdown3">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col mt-2 mb-2">
+            <div class="form-group">
+              <label for="dropdown4">Skill Matrix 8</label>
+              <select class="form-control" id="dropdown4">
+                <option disabled selected value="">--Select--</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button id="closeButton" type="button" class="btn btn-secondary mr-2 mt-2" data-dismiss="modal">Close</button>
+    <button (click)="addEmployee()" *ngIf="emp.employee_id== null" class="btn btn-success mt-2">
+      <i class="pi pi-save"></i> Save </button>
+    <button (click)="updateEmployee()" *ngIf="emp.employee_id!= null" class="btn btn-success mt-2">
+      <i class="pi pi-pencil"></i> Update </button>
+  </div>

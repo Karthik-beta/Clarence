@@ -1,0 +1,262 @@
+<div class="container-fluid  mb-2">
+  <div class="row">
+     <div class="col-2">
+        <div class="card card-info" style="background-color: teal;">
+           <div class="card-body">
+              <div class="row">
+                 <div class="col-auto">
+                    <!-- <div class="card card-icon" style="background-color: teal;"> -->
+                    <div class="card-icon">
+                       <i class="bi bi-person-fill-add"></i>
+                    </div>
+                 </div>
+                 <div class="col">
+                    <div class="">
+                       <h6 class="card-title">Onboarding</h6>
+                       <p class="card-text">165</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="col-2">
+        <div class="card card-info" style="background-color: green;">
+           <div class="card-body">
+              <div class="row">
+                 <div class="col-auto">
+                    <!-- <div class="card card-icon" style="background-color: green;"> -->
+                    <div class="card-icon">
+                       <i class="bi bi-people-fill"></i>
+                    </div>
+                 </div>
+                 <div class="col">
+                    <div class="">
+                       <h6 class="card-title">Active</h6>
+                       <p class="card-text">165</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="col-4">
+      <div class="card card-info" style="background-color: purple;">
+        <div class="card-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <h6 class="card-title" style="font-weight: bold; text-align: center;">Gender Distribution:</h6>
+          <!-- You can use a table or a list to display the data -->
+          <p class="card-text" style="display: flex; align-items: center; justify-content: center;">
+            <i class="bi bi-gender-male"></i><span class="icon-margin">Male: 130</span>
+            <i class="bi bi-gender-female"></i><span class="icon-margin">Female: 35</span>
+            <i class="bi bi-gender-trans"></i><span class="icon-margin">Others: 0</span>
+          </p>
+        </div>
+      </div>
+    </div>
+     <div class="col-2">
+        <div class="card card-info"  style="background-color: gray;">
+           <div class="card-body">
+              <div class="row">
+                 <div class="col-auto">
+                    <div class="card-icon">
+                       <i class="bi bi-person-fill-dash"></i>
+                    </div>
+                 </div>
+                 <div class="col">
+                    <div class="">
+                       <h6 class="card-title">Resigned</h6>
+                       <p class="card-text">0</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="col-2">
+        <div class="card card-info" style="background-color: red;">
+           <div class="card-body">
+              <div class="row">
+                 <div class="col-auto">
+                    <div class="card-icon">
+                       <i class="bi bi-person-fill-exclamation"></i>
+                    </div>
+                 </div>
+                 <div class="col">
+                    <div class="">
+                       <h6 class="card-title">Absconded</h6>
+                       <p class="card-text">0</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+          <div class="card">
+              <div class="card-body d-flex justify-content-center" style="height: 25%;">
+                  <p class="card-text">
+                      <i class="bi bi-gender-male"></i><span class="icon-margin">Male: 345</span>
+                      <i class="bi bi-gender-female"></i><span class="icon-margin">Female: 123</span>   &nbsp;&nbsp;&nbsp;
+                      <i class="bi bi-gender-trans"></i><span class="icon-margin">Others: 12</span>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+
+
+<div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered" >
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-emp [emp]="emp" *ngIf="ActivateAddEditEmp" (employeeAdded)="onEmployeeAdded()"></app-add-edit-emp>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container-fluid col-md-12 mt-2 mb-2 small-calendar">
+  <div class="row">
+    <div class="col-auto d-flex justify-content-end">
+      <span class="p-float-label">
+        <p-autoComplete pInputText class="p-button-raised shadow"></p-autoComplete>
+        <label for="inputtext-left">Search</label>
+      </span>
+    </div>
+    <div class="col-auto d-flex justify-content-end"> <!-- Move to the right -->
+      <button type="button" (click)="showDialog()" class="btn btn-primary btn-lg shadow hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  data-toggle="modal" data-target="#staticBackdrop" data-backdrop="static" (click)="addClick()">
+        <i class="fa-solid fa-person-circle-plus"></i> Add Employee
+      </button>
+    </div>
+    <div class="col-auto d-flex justify-content-end"> <!-- Move to the right -->
+      <div class="dropleft">
+        <button type="button" class="btn btn-primary btn-lg hover shadow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item">Download Excel</a>
+          <a class="dropdown-item">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div class="search-bar d-flex mt-2">
+  <button type="button" routerLink="/dashboard" class="btn btn-secondary ml-2 mr-1 d-flex align-items-center" >
+    <i class="bi bi-chevron-left mr-2"></i> Back
+  </button>
+    <input class="form-control ml-1"  placeholder="Search">
+    <button type="button" (click)="downloadEmployeeData()" class="btn btn-outline-primary ml-2 d-flex align-items-center" data-toggle="modal" data-target="#exportModalCenter">
+      <i class="pi pi-download mr-2"></i> Export
+    </button>
+    <button type="button" class="btn btn-primary ml-2 mr-1 d-flex align-items-center" data-toggle="modal" data-target="#staticBackdrop" data-backdrop="static"
+    (click)="addClick()"><i class="bi bi-person-fill-add mr-2"></i>Add Employee</button>
+  </div> -->
+
+
+
+
+
+<div class="card mt-2 shadow" style="border: none !important;">
+  <p-table
+  [value]="combinedLogs"
+  class="p-datatable-sm"
+  styleClass="p-datatable-sm p-datatable-gridlines"
+  [tableStyle]="{ 'min-width': '20rem' }"
+  [lazy]="true"
+  [loading]="loading"
+  (onLazyLoad)="loadLogs($event)"
+  [paginator]="true"
+  [rows]="rows"
+  [totalRecords]="totalRecords"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="{first} - {last} of {totalRecords}"
+  >
+  <!-- Rest of the PrimeNG DataTable code here -->
+  <ng-template pTemplate="header">
+     <tr class="text-size">
+        <th>#</th>
+        <th>EMPLOYEE ID</th>
+        <th>DEVICE ENROLL ID</th>
+        <th>EMPLOYEE NAME</th>
+        <th>COMPANY</th>
+        <th>LOCATION</th>
+        <th>JOB TYPE</th>
+        <!-- <th>SHIFT</th> -->
+        <th>DEPARTMENT</th>
+        <th>DESIGNATION</th>
+        <th>EMPLOYEE TYPE</th>
+        <th>DATE OF JOINING</th>
+        <th>DATE OF LEAVING</th>
+        <th>STATUS</th>
+        <th>OPTIONS</th>
+        <!-- Add other headers for the remaining fields -->
+     </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-log let-i="rowIndex">
+      <tr class="text-size">
+        <td>{{ i + 1 }}</td>
+        <td>{{ log.employee_id }}</td>
+        <td>{{ log.device_enroll_id }}</td>
+        <td>{{ log.employee_name }}</td>
+        <td>{{ log.company }}</td>
+        <td>{{ log.location }}</td>
+        <td>{{ log.job_type }}</td>
+        <!-- <td>{{ log.shift }}</td> -->
+        <td>{{ log.department }}</td>
+        <td>{{ log.designation }}</td>
+        <td>{{ log.category }}</td>
+        <td>{{ log.date_of_joining }}</td>
+        <td></td>
+        <td>{{ log.status }}</td>
+        <td>
+          <div class="row">
+            <div class="col d-flex justify-content-between">
+              <button type="button" class="btn btn-info mr-2" (click)="editClick(log)" data-toggle="modal" data-target="#staticBackdrop" data-backdrop="static"><i class="bi bi-pencil-square"></i></button>
+              <button type="button" class="btn btn-danger" (click)="deleteClick(log)"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>
+        </td>
+        <!-- Add other body rows for the remaining fields -->
+      </tr>
+  </ng-template>
+  </p-table>
+  <!-- Add the p-paginator component below the table -->
+  <!-- <p-paginator
+     [rows]="rows"
+     [totalRecords]="totalRecords"
+     [rowsPerPageOptions]="rowsPerPageOptions"
+     (onPageChange)="onPageChange($event)"
+     ></p-paginator> -->
+</div>
