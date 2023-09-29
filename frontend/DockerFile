@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the app (assuming you want to build it in this stage)
-RUN npm run build --prod
+npm run build --prod --omit=dev
 
 # Stage 2: Create the final Nginx image
 FROM nginx:stable
